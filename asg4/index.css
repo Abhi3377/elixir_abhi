@@ -1,0 +1,252 @@
+
+
+#empty
+{
+  width: 1100px;
+  position: relative;
+  -webkit-animation:move 20s infinite linear;
+  height: 100px;
+
+}
+#follower
+{
+
+  position: absolute;
+  z-index:10;
+  width: 1000px;
+  height: 100px;
+  right: 100px;
+  background-color: white;
+}
+#pacman-body
+{
+  right: 0px;
+  width: 100px;
+  height: 100px;
+  z-index: 5;
+  position: absolute
+}
+#upper-half
+{
+
+  position: absolute;
+  width:100px;
+  height: 100px;
+background-color:yellow;
+border-radius: 50px;
+clip:rect(0px,100px,50px,0px);
+transform: rotateZ(-30deg);
+-webkit-animation:upper 2s infinite linear;
+
+}
+#lower-half
+{
+  -webkit-animation:lower 2s infinite linear;
+
+  position: absolute;
+  width:100px;
+  height: 100px;
+background-color: yellow;
+border-radius: 50px;
+ clip:rect(50px,100px,100px,0px);
+ transform: rotateZ(30deg);
+}
+#teeth
+{
+  z-index: -2;
+  -webkit-animation:teeth 2s infinite linear;
+  position: absolute;
+  width: 0px;
+  heig45: 0px;
+  border: 15px solid transparent;
+  border-top-color:red;
+  left:65px;
+  top:35px;
+  transform: rotateZ(-30deg);
+}
+#teeth1
+{
+  z-index: -2;
+  -webkit-animation:teeth1 2s infinite linear;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border: 15px solid transparent;
+  border-bottom-color:red;
+  transform: rotateZ(45deg);
+  left:65px;
+  top:45px;
+}
+#eye
+{
+  -webkit-animation:eye 2s infinite linear;
+
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border: 5px solid black;
+  border-radius: 10px;
+  left: 50px;
+  top:16px;
+}
+.circle
+{
+  z-index:-5;
+  right:580px;
+  top:50px;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  border-radius: 15px;
+}
+.circle1
+{
+  z-index: -5;
+  right:650px;
+  top:50px;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  border-radius: 15px;
+}
+.circle2
+{
+  z-index: -5;
+  right:720px;
+  top:50px;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  border-radius: 15px;
+}
+
+@-webkit-keyframes upper
+{
+  0%
+  {
+    transform: rotateZ(-45deg);
+  }
+  50%
+  {
+    transform: rotateZ(0deg);
+  }
+  100%
+  {
+    transform: rotateZ(-45deg);
+  }
+}
+@-webkit-keyframes teeth
+{
+  0%
+  {
+    transform: rotateZ(-45deg);
+    left:62px;
+    top:28px;
+  }
+  50%
+  {
+    transform:rotateZ(0deg);
+    top:50px;
+    left:60px;
+
+  }
+  100%
+  {
+    transform: rotateZ(-45deg);
+    left:62px;
+    top:28px;
+  }
+}
+@-webkit-keyframes teeth1
+{
+  0%
+  {
+    transform: rotateZ(45deg);
+    left:65px;
+    top:45px;
+  }
+  50%
+  {
+    transform:rotateZ(0deg);
+    top:20px;
+    left:60px;
+  }
+  100%
+  {
+    transform: rotateZ(45deg);
+    left:65px;
+    top:42x;
+}
+}
+@-webkit-keyframes lower
+{
+  0%
+  {
+    transform: rotateZ(+45deg);
+  }
+  50%
+  {
+    transform: rotateZ(0deg);
+  }
+  100%
+  {
+    transform: rotateZ(+45deg);
+  }
+}
+@-webkit-keyframes eye
+{
+  0%,100%
+  {
+    left:45px;
+    top:10px;
+  }
+  50%
+  {
+    left:65px;
+    top:26px;
+  }
+}
+@-webkit-keyframes move
+{
+  0%
+  {
+    transform: scaleX(1);
+    margin-left: -1000px;
+  }
+  50%
+  {
+    margin-left: 500px;
+    transform: scaleX(1);
+  }
+  50.1%
+  {
+    margin-left: 1500px;
+    transform: scaleX(-1);
+  }
+  100%
+  {
+    transform: scaleX(-1);
+    margin-left: 0px;
+  }
+}
+@-webkit-keyframes cover
+{
+  0%
+  {
+    width:1000px;
+    left:-1000px;
+  }
+  50.1%
+  {
+  width:1000px;
+  right:0px;
+  }
+  100%{
+    width: 1000px;
+    left: 0px;
+  }
+
+}
